@@ -7,6 +7,8 @@
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
+
+            <link href="{{ asset('css/css.css') }}" rel="stylesheet" />
         {% endblock %}
 
         {% block javascripts %}
@@ -14,6 +16,13 @@
         {% endblock %}
     </head>
     <body>
+    {% block navigation %}
+            <ul class="menu">
+                <li><a href="{{ path('livre' )  }}">Voir la liste des livres</a></li>
+                <li><a href="{{ path('livreNew' )  }}">Enregistrer un nouveau livre</a></li>
+            </ul>
+
+            {% endblock %}
         {% block body %}{% endblock %}
     </body>
 </html>

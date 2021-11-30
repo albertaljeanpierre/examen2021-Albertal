@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des livres {% endblock %}
+{% block title %}Ajout d'un livre {% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,8 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Détail d'un livre </h1>
-   <p>Titre du livre : {{ livre.titre }}</p>
-   <p>Résumé : {{ livre.resume }}</p>
-   <p>Nombre de vote(s) : {{ livre.votes }}</p>
-   <p>Ajouté le : {{ livre.dateAjout |date("m/d/Y") }}</p>
-   <p>Genre : {{ livre.genre }}</p>
+    <h1>Ajout d'un livre </h1>
+   {{ form(form) }}
 
 
 </div>

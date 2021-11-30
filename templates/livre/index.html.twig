@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LivreController!{% endblock %}
+{% block title %}Liste des livres {% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,13 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
+    <h1>Liste des livres </h1>
     <ul>
-        <li>Your controller at <code><a href="{{ 'F:/Projet-PHP-2021/examen2021-Albertal/src/Controller/LivreController.php'|file_link(0) }}">src/Controller/LivreController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'F:/Projet-PHP-2021/examen2021-Albertal/templates/livre/index.html.twig'|file_link(0) }}">templates/livre/index.html.twig</a></code></li>
+        {% for livre in livres %}
+            <li> <a href="{{ path('detail' , {id: livre.id}  )    }}">{{ livre.titre}} </a></li>
+        {% endfor %}
     </ul>
+
+
 </div>
 {% endblock %}

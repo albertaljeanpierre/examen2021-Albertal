@@ -14,7 +14,7 @@ final class Version20211130172942 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'Création des tables genre et livre';
     }
 
     public function up(Schema $schema): void
