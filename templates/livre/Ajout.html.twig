@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des livres {% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Détail d'un livre </h1>
+   <p>Titre du livre : {{ livre.titre }}</p>
+   <p>Résumé : {{ livre.resume }}</p>
+   <p>Nombre de vote(s) : {{ livre.votes }}</p>
+   <p>Ajouté le : {{ livre.dateAjout |date("m/d/Y") }}</p>
+   <p>Genre : {{ livre.genre }}</p>
+
+
+</div>
+{% endblock %}
